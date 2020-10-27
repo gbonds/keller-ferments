@@ -24,8 +24,125 @@
 
 <body>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+  <header>
+    <img src="img/noun_Opossum_36312.png" alt="Keller Ferment opossum logo" class="header-logo">
+    <h1>Keller Ferments</h1>
+    <h4>Delicious Fermented Goods</h4>
+    <nav>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Shop</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Recipes</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <h2 class="section__header">Homemade ferments that are good for your gut and your tastebuds.</h2>
+      <p class="section__body">We carefully produce a variety of fermented goods, ranging from pickles and kimchi to
+        kombucha and other
+        cultures. Come find us in a store, or order online!</p>
+      <button class="btn--accent">Start Shopping</button> <!-- TODO wrap button in link -->
+    </section> <!-- .hero-section -->
+
+    <section id="product-feature-section">
+      <h2 class="section__subheader">Products</h2>
+      <h3 class="section__header">Our Favorites</h3>
+      <div class="content-container">
+        <div class="content-item">
+          <img class="content-item__img" src="img/pickles-thumbnail_800.jpg" alt="Jar of pickles">
+          <h4 class="content-item__header">Pickles</h4>
+          <p class="content-item__subheader">$8 + shipping</p>
+        </div> <!-- .content-item -->
+        <div class="content-item">
+          <img class="content-item__img" src="img/kombucha-thumbnail_800.jpg" alt="Jar of kombucha brewing">
+          <h4 class="content-item__header">Kombucha Starter Kit</h4>
+          <p class="content-item__subheader">$35 + shipping</p>
+        </div> <!-- .content-item -->
+        <div class="content-item">
+          <img class="content-item__img" src="img/kimchi-thumbnail_800.jpg" alt="Bowl of kimchi">
+          <h4 class="content-item__header">Kimchi</h4>
+          <p class="content-item__subheader">$12 + shipping</p>
+        </div> <!-- .content-item -->
+      </div> <!-- .content-container -->
+      <button class="btn--transparent">Start Shopping</button> <!-- TODO wrap button in link -->
+    </section> <!-- #product-feature-section -->
+
+    <section id="reviews-section">
+      <h2 class="section__subheader">Reviews</h2>
+      <h3 class="section__header">You'll Love Us!</h3>
+      <div class="content-container">
+        <div class="content-item">
+          <h4 class="content-item__header">“Delicious and fun”</h4>
+          <p class="content-item__body">So glad I ordered the Kombucha Kit! It’s been so fun making my own at
+            home.<br />
+            <strong>-Felicia</strong></p>
+        </div> <!-- .content-item -->
+        <div class="content-item">
+          <h4 class="content-item__header">“Love all the options”</h4>
+          <p class="content-item__body">My wife and I appreciated the different level of spiciness available for the
+            kimchi- this way, both of us can enjoy in our own way.<br>
+            <strong>-Joseph</strong></p>
+        </div> <!-- .content-item -->
+        <div class="content-item">
+          <h4 class="content-item__header">“Fantastic quality”</h4>
+          <p class="content-item__body">I’m really appreciating the quality of their pickles. The flavor of the veg is
+            outstanding.<br><strong>-Mark</strong></p>
+        </div> <!-- .content-item -->
+      </div> <!-- .content-container -->
+      <button class="btn--transparent">Start Shopping</button> <!-- TODO wrap button in link -->
+    </section> <!-- #reviews-section -->
+
+    <section id="recipes-section">
+      <figure><img src="img/kelsey-chance-ZrhtQyGFG6s-unsplash.jpg" alt="Party with snack boards"></figure>
+      <h2 class="section__subheader">Recipes</h2>
+      <h3 class="section__header">Get Inspired</h3>
+      <div class="article-container">
+        <article class="recipe-article content-item">
+          <h4 class="content-item__header">Kimchi Pancake</h4>
+          <p class="content-item__subheader">July 12, 2020</p>
+          <p class="content-item__body">Ingredients  ½ cup kimchi, ¾ cup rice flour, 3 Tbsp neutral oil …</p>
+          <a href="#">Read More</a>
+        </article>
+        <article class="recipe-article content-item">
+          <h4 class="content-item__header">Party Snack Board</h4>
+          <p class="content-item__subheader">March 25, 2020</p>
+          <p class="content-item__body">Ingredients  Pickles, handful roasted nuts, gouda cheese,  …</p>
+          <a href="#">Read More</a>
+        </article>
+      </div> <!-- .content-container -->
+    </section> <!-- #recipes-section -->
+
+  </main>
+
+  <footer>
+    <div class="footer__newsletter">
+      <h4>Want to hear more? Sign up for updates!</h4>
+      <p>placeholder for email input box</p>
+    </div>
+    <div class="footer__nav">
+      <div class="footer__social-links">
+        <p>in</p>
+        <p>fb</p>
+        <p>tw</p>
+      </div>
+      <div class="footer__nav-links">
+        <li><a href="">Home</a></li>
+        <li><a href="">Shop</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Recipes</a></li>
+        <li><a href="">Contact</a></li>
+      </div>
+      <div class="footer__copyright">
+        <p>&copy; Keller Ferments 2020</p>
+      </div>
+    </div> <!-- .footer__nav -->
+  </footer>
+
+  <!-- Boilerplate JavaScript -->
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
