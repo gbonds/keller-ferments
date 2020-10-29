@@ -90,6 +90,7 @@ body {
 }
 
 /* ---- Overriding Default Formatting ---- */
+
 h1, h2, h3, h4, p, figure, ul {
   margin: 0;
   /* overrides default margins */
@@ -142,10 +143,48 @@ nav ul {
 }
 
 /* ==========================================================================
+   Base Footer
+   ========================================================================== */
+
+.footer__newsletter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer__newsletter__email-input {
+  border: .5px solid black;
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+.footer__social-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer__nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}
+
+.footer__nav-links a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+/* ==========================================================================
    Base Homepage
    ========================================================================== */
 
-   /* ----- Base Product Feature Section ---- */
+/* ----- Base Product Feature Section ---- */
 
 .content-item__product-link {
   text-decoration: none;
@@ -157,6 +196,7 @@ nav ul {
 }
 
 /* ----- Base Recipes Section ---- */
+
 #recipes-section img {
   width: 100%;
 }
