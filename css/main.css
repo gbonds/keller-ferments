@@ -147,7 +147,7 @@ nav ul {
 
    /* ----- Base Product Feature Section ---- */
 
-.content-item__link {
+.content-item__product-link {
   text-decoration: none;
   color: inherit;
 }
@@ -156,8 +156,14 @@ nav ul {
   width: 100%;
 }
 
+/* ----- Base Recipes Section ---- */
+#recipes-section img {
+  width: 100%;
+}
 
-
+.content-item__recipe-link {
+  color: inherit;
+}
 
 /* ==========================================================================
    Helper classes
