@@ -102,6 +102,13 @@ ul {
 
 /* ---- Layout---- */
 
+.content-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
 /* ---- Typography ---- */
 
 /* ==========================================================================
@@ -133,6 +140,24 @@ nav ul {
   align-items: center;
   list-style-type: none;
 }
+
+/* ==========================================================================
+   Base Homepage
+   ========================================================================== */
+
+   /* ----- Base Product Feature Section ---- */
+
+.content-item__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.content-item__img {
+  width: 100%;
+}
+
+
+
 
 /* ==========================================================================
    Helper classes
