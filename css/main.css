@@ -86,22 +86,31 @@ textarea {
 /* ---- Global Styles ---- */
 
 :root {
-  --dark-clr: rgb(33, 33, 33);
-  --light-clr: white;
+  --clr-dark: rgb(33, 33, 33);
+  --clr-light: white;
   --primary-clr: rgb(221, 126, 107);
   --accent-clr: rgb(32, 96, 59);
-
   --ff-main: 'Montserrat', sans-serif;
   --ff-accent: 'Comfortaa', sans-serif;
-
   --fw-normal: 500;
   --fw-light: 300;
   --fw-bold: 600;
+  --padding-normal: 2rem;
+  --padding-big: calc(var(--padding-normal) * 1.5);
+  --padding-small: calc(var(--padding-normal) * .5);
+}
+
+.darken-overlay div {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 body {
   background: #fffdf3ff;
-  color: var(--dark-clr);
+  color: var(--clr-dark);
+  font-size: 16px;
+  font-family: var(--ff-main);
 }
 
 /* ---- Overriding Default Formatting ---- */
@@ -125,6 +134,10 @@ ul {
   flex-direction: column;
 }
 
+section {
+  padding: var(--padding-normal);
+}
+
 /* ---- Typography ---- */
 
 /* ==========================================================================
@@ -136,10 +149,12 @@ ul {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  padding: var(--padding-small);
 }
 
 .header__logo-link {
   width: 75%;
+  padding-bottom: var(--padding-small);
 }
 
 .header__logo {
@@ -160,11 +175,16 @@ nav ul {
 .header__nav ul li a {
   text-decoration: none;
   color: inherit;
+  font-size: .75rem;
 }
 
 /* ==========================================================================
    Base Footer
    ========================================================================== */
+
+footer {
+  padding: var(--padding-small);
+}
 
 .footer__newsletter {
   display: flex;
@@ -198,11 +218,19 @@ nav ul {
   color: inherit;
 }
 
-
-
 /* ==========================================================================
    Base Homepage
    ========================================================================== */
+
+/* ----- Base Hero Section ---- */
+
+.hero-section {
+  background-image: url(../img/pickle-collection_dark.jpg);
+  background-size: cover;
+  background-position: center;
+  color: var(--clr-light);
+  padding: var(--padding-big);
+}
 
 /* ----- Base Product Feature Section ---- */
 
