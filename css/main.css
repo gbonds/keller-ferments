@@ -100,12 +100,6 @@ textarea {
   --padding-small: calc(var(--padding-normal) * .5);
 }
 
-.darken-overlay div {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
 body {
   background: #fffdf3ff;
   color: var(--clr-dark);
@@ -126,7 +120,7 @@ ul {
   /* overrides default padding on lists */
 }
 
-/* ---- Layout---- */
+/* ---- Layout & Typograph ---- */
 
 .content-container {
   display: flex;
@@ -137,15 +131,46 @@ ul {
 
 section {
   padding: var(--padding-normal);
+  text-align: center;
 }
 
-/* ---- Typography ---- */
+.section__subheader {
+  font-size: 1rem;
+  font-family: var(--ff-accent);
+}
+
+.section__header {
+  font-size: 1.5rem;
+  padding-bottom: var(--padding-normal);
+}
+
+.content-item {
+  padding: var(--padding-small) 0;
+}
+
+.content-item__header {
+  padding-top: calc(var(--padding-small) * .75);
+}
+
+.content-item__subheader, .content-item__body {
+  font-weight: var(--fw-light);
+  /* Recipes section has different font-weight for __body */
+}
 
 .btn--accent {
   background-color: var(--clr-accent);
   color: var(--clr-light);
   border: 1px solid var(--clr-light);
   padding: var(--padding-small);
+  border-radius: .75rem;
+}
+
+.btn--transparent {
+  background-color: inherit;
+  color: var(--clr-accent);
+  border: .15rem solid var(--clr-accent);
+  padding: var(--padding-small);
+  border-radius: .75rem;
 }
 
 /* ==========================================================================
@@ -237,11 +262,10 @@ footer {
   background-size: cover;
   background-position: center;
   color: var(--clr-light);
-  padding: var(--padding-big);
+  text-align: left;
 }
 
-.hero__header,
-.hero__body {
+.hero__header, .hero__body {
   padding-bottom: var(--padding-small);
 }
 
@@ -254,7 +278,15 @@ footer {
   font-weight: var(--fw-light);
 }
 
+.hero-section button {
+  margin: var(--padding-normal) 0;
+}
+
 /* ----- Base Product Feature Section ---- */
+
+#product-feature-section .content-container {
+  text-align: left;
+}
 
 .content-item__product-link {
   text-decoration: none;
@@ -265,10 +297,41 @@ footer {
   width: 100%;
 }
 
+#product-feature-section button {
+  margin: var(--padding-normal);
+}
+
+/* ----- Base Reviews Section ---- */
+
+#reviews-section {
+  background-image: url(../img/jar-wall_dark.jpg);
+  background-size: cover;
+  background-position: center;
+  color: var(--clr-light);
+}
+
+#reviews-section .content-item {
+  text-align: center;
+  line-height: 1.6;
+}
+
 /* ----- Base Recipes Section ---- */
+
+#recipes-section {
+  background-color: var(--clr-primary);
+}
+
+#recipes-section .article-container {
+  text-align: left;
+}
 
 #recipes-section img {
   width: 100%;
+}
+
+#recipes-section .content-item__body {
+  font-weight: var(--fw-normal);
+  padding: var(--padding-small) 0;
 }
 
 .content-item__recipe-link {
