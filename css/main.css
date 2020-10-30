@@ -88,8 +88,8 @@ textarea {
 :root {
   --clr-dark: rgb(33, 33, 33);
   --clr-light: white;
-  --primary-clr: rgb(221, 126, 107);
-  --accent-clr: rgb(32, 96, 59);
+  --clr-primary: rgb(221, 126, 107);
+  --clr-accent: rgb(32, 96, 59);
   --ff-main: 'Montserrat', sans-serif;
   --ff-accent: 'Comfortaa', sans-serif;
   --fw-normal: 500;
@@ -111,6 +111,7 @@ body {
   color: var(--clr-dark);
   font-size: 16px;
   font-family: var(--ff-main);
+  font-weight: var(--fw-normal):
 }
 
 /* ---- Overriding Default Formatting ---- */
@@ -139,6 +140,13 @@ section {
 }
 
 /* ---- Typography ---- */
+
+.btn--accent {
+  background-color: var(--clr-accent);
+  color: var(--clr-light);
+  border: 1px solid var(--clr-light);
+  padding: var(--padding-small);
+}
 
 /* ==========================================================================
    Base Header & Navigation
@@ -230,6 +238,20 @@ footer {
   background-position: center;
   color: var(--clr-light);
   padding: var(--padding-big);
+}
+
+.hero__header,
+.hero__body {
+  padding-bottom: var(--padding-small);
+}
+
+.hero__header {
+  font-family: var(--ff-accent);
+  font-weight: var(--fw-light);
+}
+
+.hero__body {
+  font-weight: var(--fw-light);
 }
 
 /* ----- Base Product Feature Section ---- */
