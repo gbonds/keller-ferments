@@ -85,8 +85,23 @@ textarea {
 
 /* ---- Global Styles ---- */
 
+:root {
+  --dark-clr: rgb(33, 33, 33);
+  --light-clr: white;
+  --primary-clr: rgb(221, 126, 107);
+  --accent-clr: rgb(32, 96, 59);
+
+  --ff-main: 'Montserrat', sans-serif;
+  --ff-accent: 'Comfortaa', sans-serif;
+
+  --fw-normal: 500;
+  --fw-light: 300;
+  --fw-bold: 600;
+}
+
 body {
   background: #fffdf3ff;
+  color: var(--dark-clr);
 }
 
 /* ---- Overriding Default Formatting ---- */
@@ -140,6 +155,11 @@ nav ul {
   justify-content: space-around;
   align-items: center;
   list-style-type: none;
+}
+
+.header__nav ul li a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* ==========================================================================
