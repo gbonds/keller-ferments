@@ -125,7 +125,6 @@ ul {
 .content-container {
   display: flex;
   justify-content: space-around;
-  align-items: center;
   flex-direction: column;
 }
 
@@ -246,10 +245,13 @@ footer {
 
 .footer__nav {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.footer__social-links,
-.footer__nav-links {
+.footer__social-links, .footer__nav-links {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -267,7 +269,6 @@ footer {
 .footer__nav-links {
   list-style-type: none;
   font-size: .85rem;
-  
 }
 
 .footer__nav-links a {
@@ -454,9 +455,102 @@ footer {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 768px) {
+  /* ---- Tablet Layout & Typograph ---- */
+
+.content-container {
+  justify-content: space-between;
+  flex-direction: row;
 }
+
+.content-item {
+  width: 30%;
+}
+  
+  /* ==========================================================================
+   Tablet Header
+   ========================================================================== */
+  .header-section {
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: row;
+    padding: var(--padding-small) var(--padding-normal);
+  }
+  .header__logo-link {
+    width: 25%;
+    padding: 0;
+  }
+  .header__nav {
+    width: 50%;
+    padding: var(--padding-small);
+  }
+  /* ==========================================================================
+   Tablet Footer
+   ========================================================================== */
+.footer__newsletter {
+  width: 95%;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: var(--padding-big) var(--padding-normal);
+}
+
+.footer__newsletter__header,
+.footer__newsletter__email-input {
+  width: 45%;
+}
+
+.footer__newsletter__header {
+  padding-bottom: 0;
+  /* resets padding from mobile */
+}
+
+.footer__nav {
+  flex-direction: row-reverse;
+}
+
+.footer__social-links {
+  font-size: 2rem;
+  width: 25%;
+}
+
+.footer__nav-links {
+  width: 45%;
+}
+
+.footer__copyright {
+  padding: var(--padding-small);
+  width: 20%;
+  /* this makes padding the same as nav-links and social-links in Tablet. padding is larger for copyright on mobile. */
+}
+
+  /* ==========================================================================
+   Tablet Homepage
+   ========================================================================== */
+  /* ----- Tablet Hero Section ---- */
+  .hero-section {
+    padding: var(--padding-big);
+  }
+
+  /* ----- Tablet Recipes Section ---- */
+  #recipes-section {
+    padding: var(--padding-big);
+  }
+  
+  #recipes-section figure {
+    width: 45%;
+  }
+
+  #recipes-section .article-container {
+    width: 50%;
+  }
+
+  .recipe-article.content-item {
+    width: 100%;
+    /* width overrides general styling for .content-item on tablet */
+  }
+
+
+} /* Tablet media query ends */
 
 @media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
