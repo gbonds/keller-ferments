@@ -216,14 +216,24 @@ nav ul {
    ========================================================================== */
 
 footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
   padding: var(--padding-small);
 }
 
 .footer__newsletter {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: var(--padding-normal);
+}
+
+.footer__newsletter__header {
+  text-align: center;
+  padding-bottom: var(--padding-small);
 }
 
 .footer__newsletter__email-input {
@@ -231,24 +241,45 @@ footer {
   padding: 5px;
   width: 100%;
   text-align: center;
+  font-weight: var(--fw-light);
 }
 
-.footer__social-links {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.footer__nav {
+  width: 100%;
 }
 
+.footer__social-links,
 .footer__nav-links {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: var(--padding-small);
+}
+
+.footer__social-links {
+  font-size: 2.5rem;
+}
+
+.footer__social-links a {
+  color: inherit;
+}
+
+.footer__nav-links {
   list-style-type: none;
+  font-size: .85rem;
+  
 }
 
 .footer__nav-links a {
   text-decoration: none;
   color: inherit;
+}
+
+.footer__copyright {
+  font-weight: var(--fw-light);
+  padding: var(--padding-normal);
+  text-align: center;
+  font-size: .75rem;
 }
 
 /* ==========================================================================
