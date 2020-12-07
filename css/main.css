@@ -211,6 +211,35 @@ nav ul {
 }
 
 /* ==========================================================================
+   Base Hero
+   ========================================================================== */
+/* Separate styling for each page's hero can be found in the styling sections for the page. */
+
+.hero-section {
+  background-size: cover;
+  background-position: center;
+  color: var(--clr-light);
+  text-align: left;
+}
+
+.hero__header, .hero__body {
+  padding-bottom: var(--padding-small);
+}
+
+.hero__header {
+  font-family: var(--ff-accent);
+  font-weight: var(--fw-light);
+}
+
+.hero__body {
+  font-weight: var(--fw-light);
+}
+
+.hero-section button {
+  margin: var(--padding-normal) 0;
+}
+
+/* ==========================================================================
    Base Footer
    ========================================================================== */
 
@@ -287,31 +316,10 @@ footer {
    Base Homepage
    ========================================================================== */
 
-/* ----- Base Hero Section ---- */
-
-.hero-section {
+/* ----- Base (Homepage) Hero Section ---- */
+/* General styling for all hero sections can be found above in "Base Hero" */
+#homepage-hero {
   background-image: url(../img/pickle-collection_dark.jpg);
-  background-size: cover;
-  background-position: center;
-  color: var(--clr-light);
-  text-align: left;
-}
-
-.hero__header, .hero__body {
-  padding-bottom: var(--padding-small);
-}
-
-.hero__header {
-  font-family: var(--ff-accent);
-  font-weight: var(--fw-light);
-}
-
-.hero__body {
-  font-weight: var(--fw-light);
-}
-
-.hero-section button {
-  margin: var(--padding-normal) 0;
 }
 
 /* ----- Base Product Feature Section ---- */
@@ -369,6 +377,15 @@ footer {
 .content-item__recipe-link {
   color: inherit;
 }
+
+/* ==========================================================================
+   Base Products
+   ========================================================================== */
+/* General styling for all hero sections can be found above in "Base Hero" */
+   #products-hero {
+    background-image: url(../img/hand-pickle-dark.jpg);
+}
+
 
 /* ==========================================================================
    Helper classes
