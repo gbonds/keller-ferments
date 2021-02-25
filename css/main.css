@@ -302,6 +302,11 @@ footer {
 .footer__nav-links {
   list-style-type: none;
   font-size: .85rem;
+  flex-flow: column;
+}
+
+.footer__nav-links li {
+  padding: var(--padding-small);
 }
 
 .footer__nav-links a {
@@ -534,6 +539,8 @@ footer {
   }
   .footer__nav-links {
     width: 45%;
+    flex-flow: row;
+    }
   }
   .footer__copyright {
     padding: var(--padding-small);
