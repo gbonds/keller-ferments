@@ -372,12 +372,8 @@ footer {
   background-color: var(--clr-primary);
 }
 
-#recipes-section .article-container {
+.recipe-article__content {
   text-align: left;
-}
-
-#recipes-section img {
-  width: 100%;
 }
 
 #recipes-section .content-item__body {
@@ -540,7 +536,6 @@ footer {
   .footer__nav-links {
     width: 45%;
     flex-flow: row;
-    }
   }
   .footer__copyright {
     padding: var(--padding-small);
@@ -548,8 +543,8 @@ footer {
     /* this makes padding the same as nav-links and social-links in Tablet. padding is larger for copyright on mobile. */
   }
   /* ==========================================================================
-   Tablet Homepage
-   ========================================================================== */
+    Tablet Homepage
+    ========================================================================== */
   /* ----- Tablet Hero Section ---- */
   .hero-section {
     padding: var(--padding-big);
@@ -558,19 +553,26 @@ footer {
   #recipes-section {
     padding: var(--padding-big);
   }
-  #recipes-section figure {
-    width: 45%;
-  }
-  #recipes-section .article-container {
-    width: 50%;
-  }
-  .recipe-article.content-item {
-    width: 100%;
+  .recipe-article {
+    width: 40%;
     /* width overrides general styling for .content-item on tablet */
   }
 }
 
 /* Tablet media query ends */
+
+@media only screen and (min-width: 1024px) {
+  .recipe-article {
+    display: flex;
+    padding: var(--padding-small);
+  }
+  .recipe-article .content-item__img {
+    padding-right: var(--padding-small);
+    object-fit: cover;
+  }
+}
+
+/* Laptop media query ends */
 
 @media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
