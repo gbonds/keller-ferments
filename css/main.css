@@ -120,7 +120,7 @@ ul {
   /* overrides default padding on lists */
 }
 
-/* ---- Layout & Typograph ---- */
+/* ---- Layout & Typography ---- */
 
 .content-container {
   display: flex;
@@ -131,6 +131,11 @@ ul {
 section {
   padding: var(--padding-normal);
   text-align: center;
+}
+
+.content-wrapper {
+  max-width: 350px;
+  margin: auto;
 }
 
 .section__subheader {
@@ -213,6 +218,7 @@ nav ul {
 /* ==========================================================================
    Base Hero
    ========================================================================== */
+
 /* Separate styling for each page's hero can be found in the styling sections for the page. */
 
 .hero-section {
@@ -317,7 +323,9 @@ footer {
    ========================================================================== */
 
 /* ----- Base (Homepage) Hero Section ---- */
+
 /* General styling for all hero sections can be found above in "Base Hero" */
+
 #homepage-hero {
   background-image: url(../img/pickle-collection_dark.jpg);
 }
@@ -381,11 +389,12 @@ footer {
 /* ==========================================================================
    Base Products
    ========================================================================== */
-/* General styling for all hero sections can be found above in "Base Hero" */
-   #products-hero {
-    background-image: url(../img/hand-pickle-dark.jpg);
-}
 
+/* General styling for all hero sections can be found above in "Base Hero" */
+
+#products-hero {
+  background-image: url(../img/hand-pickle-dark.jpg);
+}
 
 /* ==========================================================================
    Helper classes
@@ -474,16 +483,16 @@ footer {
 
 @media only screen and (min-width: 768px) {
   /* ---- Tablet Layout & Typograph ---- */
-
-.content-container {
-  justify-content: space-between;
-  flex-direction: row;
-}
-
-.content-item {
-  width: 30%;
-}
-  
+  .content-container {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .content-wrapper {
+    max-width: 1200px;
+  }
+  .content-item {
+    width: 30%;
+  }
   /* ==========================================================================
    Tablet Header
    ========================================================================== */
@@ -504,42 +513,34 @@ footer {
   /* ==========================================================================
    Tablet Footer
    ========================================================================== */
-.footer__newsletter {
-  width: 95%;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: var(--padding-big) var(--padding-normal);
-}
-
-.footer__newsletter__header,
-.footer__newsletter__email-input {
-  width: 45%;
-}
-
-.footer__newsletter__header {
-  padding-bottom: 0;
-  /* resets padding from mobile */
-}
-
-.footer__nav {
-  flex-direction: row-reverse;
-}
-
-.footer__social-links {
-  font-size: 2rem;
-  width: 25%;
-}
-
-.footer__nav-links {
-  width: 45%;
-}
-
-.footer__copyright {
-  padding: var(--padding-small);
-  width: 20%;
-  /* this makes padding the same as nav-links and social-links in Tablet. padding is larger for copyright on mobile. */
-}
-
+  .footer__newsletter {
+    width: 95%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: var(--padding-big) var(--padding-normal);
+  }
+  .footer__newsletter__header, .footer__newsletter__email-input {
+    width: 45%;
+  }
+  .footer__newsletter__header {
+    padding-bottom: 0;
+    /* resets padding from mobile */
+  }
+  .footer__nav {
+    flex-direction: row-reverse;
+  }
+  .footer__social-links {
+    font-size: 2rem;
+    width: 25%;
+  }
+  .footer__nav-links {
+    width: 45%;
+  }
+  .footer__copyright {
+    padding: var(--padding-small);
+    width: 20%;
+    /* this makes padding the same as nav-links and social-links in Tablet. padding is larger for copyright on mobile. */
+  }
   /* ==========================================================================
    Tablet Homepage
    ========================================================================== */
@@ -547,27 +548,23 @@ footer {
   .hero-section {
     padding: var(--padding-big);
   }
-
   /* ----- Tablet Recipes Section ---- */
   #recipes-section {
     padding: var(--padding-big);
   }
-  
   #recipes-section figure {
     width: 45%;
   }
-
   #recipes-section .article-container {
     width: 50%;
   }
-
   .recipe-article.content-item {
     width: 100%;
     /* width overrides general styling for .content-item on tablet */
   }
+}
 
-
-} /* Tablet media query ends */
+/* Tablet media query ends */
 
 @media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */

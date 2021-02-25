@@ -1,0 +1,4 @@
+This is a running to-do list. 
+
+2/25/21
+1. Create mobile hamburger nav menu with React and CSS, tutorial here: https://sdever.medium.com/building-a-responsive-navigation-bar-with-react-css-d9b30af03c20
