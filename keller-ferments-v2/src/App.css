@@ -1,38 +1,665 @@
-.App {
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ---- Global Styles ---- */
+
+:root {
+  --clr-dark: rgb(33, 33, 33);
+  --clr-light: white;
+  --clr-primary: rgb(221, 126, 107);
+  --clr-accent: rgb(32, 96, 59);
+  --ff-main: "Montserrat", sans-serif;
+  --ff-accent: "Comfortaa", sans-serif;
+  --fw-normal: 500;
+  --fw-light: 300;
+  --fw-bold: 600;
+  --padding-normal: 2rem;
+  --padding-big: calc(var(--padding-normal) * 1.5);
+  --padding-small: calc(var(--padding-normal) * 0.5);
+}
+
+body {
+  background: #fffdf3ff;
+  color: var(--clr-dark);
+  font-size: 16px;
+  font-family: var(--ff-main);
+  font-weight: var(--fw-normal);
+}
+
+/* ---- Overriding Default Formatting ---- */
+
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+ul {
+  margin: 0;
+  /* overrides default margins */
+}
+
+ul {
+  padding: 0;
+  /* overrides default padding on lists */
+}
+
+/* ---- Layout & Typography ---- */
+
+.content-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+section {
+  padding: var(--padding-normal);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content-wrapper {
+  max-width: 350px;
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.section__subheader {
+  font-size: 1rem;
+  font-family: var(--ff-accent);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.section__header {
+  font-size: 1.5rem;
+  padding-bottom: var(--padding-normal);
+}
+
+.content-item {
+  padding: var(--padding-small) 0;
+}
+
+.content-item__header {
+  padding-top: calc(var(--padding-small) * 0.75);
+}
+
+.content-item__subheader,
+.content-item__body {
+  font-weight: var(--fw-light);
+  /* Recipes section has different font-weight for __body */
+}
+
+.btn--accent {
+  background-color: var(--clr-accent);
+  color: var(--clr-light);
+  border: 1px solid var(--clr-light);
+  padding: var(--padding-small);
+  border-radius: 0.75rem;
+}
+
+.btn--transparent {
+  background-color: inherit;
+  color: var(--clr-accent);
+  border: 0.15rem solid var(--clr-accent);
+  padding: var(--padding-small);
+  border-radius: 0.75rem;
+}
+
+/* ==========================================================================
+   Base Header & Navigation
+   ========================================================================== */
+
+.header-section {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: var(--padding-small);
+}
+
+.header__logo-link {
+  width: 75%;
+  padding-bottom: var(--padding-small);
+}
+
+.header__logo {
+  width: 100%;
+}
+
+.header__nav {
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}
+
+.header__nav ul li a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.75rem;
+}
+
+/* ==========================================================================
+   Base Hero
+   ========================================================================== */
+
+/* Separate styling for each page's hero can be found in the styling sections for the page. */
+
+.hero-section {
+  background-size: cover;
+  background-position: center;
+  color: var(--clr-light);
+  text-align: left;
+}
+
+.hero__header,
+.hero__body {
+  padding-bottom: var(--padding-small);
+}
+
+.hero__header {
+  font-family: var(--ff-accent);
+  font-weight: var(--fw-light);
+}
+
+.hero__body {
+  font-weight: var(--fw-light);
+}
+
+.hero-section button {
+  margin: var(--padding-normal) 0;
+}
+
+/* ==========================================================================
+   Base Footer
+   ========================================================================== */
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: var(--padding-small);
+}
+
+.footer__newsletter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: var(--padding-normal);
+}
+
+.footer__newsletter__header {
+  text-align: center;
+  padding-bottom: var(--padding-small);
+}
+
+.footer__newsletter__email-input {
+  border: 0.5px solid black;
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+  font-weight: var(--fw-light);
+}
+
+.footer__nav {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer__social-links,
+.footer__nav-links {
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: var(--padding-small);
 }
 
-.App-link {
-  color: #61dafb;
+.footer__social-links {
+  font-size: 2.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.footer__social-links a {
+  color: inherit;
+}
+
+.footer__nav-links {
+  list-style-type: none;
+  font-size: 0.85rem;
+  flex-flow: column;
+}
+
+.footer__nav-links li {
+  padding: var(--padding-small);
+}
+
+.footer__nav-links a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer__copyright {
+  font-weight: var(--fw-light);
+  padding: var(--padding-normal);
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+/* ==========================================================================
+   Base Homepage
+   ========================================================================== */
+
+/* ----- Base (Homepage) Hero Section ---- */
+
+/* General styling for all hero sections can be found above in "Base Hero" */
+
+#homepage-hero {
+  /* background-image: url(../img/pickle-collection_dark.jpg); */
+}
+
+/* ----- Base Product Feature Section ---- */
+
+#product-feature-section .content-container {
+  text-align: left;
+}
+
+.content-item__product-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.content-item__img {
+  width: 100%;
+}
+
+#product-feature-section button {
+  margin: var(--padding-normal);
+}
+
+/* ----- Base Reviews Section ---- */
+
+#reviews-section {
+  /* background-image: url(../img/jar-wall_dark.jpg); */
+  background-size: cover;
+  background-position: center;
+  color: var(--clr-light);
+}
+
+#reviews-section .content-item {
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* ----- Base Recipes Section ---- */
+
+#recipes-section {
+  background-color: var(--clr-primary);
+}
+
+.recipe-article__content {
+  text-align: left;
+}
+
+#recipes-section .content-item__body {
+  font-weight: var(--fw-normal);
+  padding: var(--padding-small) 0;
+}
+
+.content-item__recipe-link {
+  color: inherit;
+}
+
+/* ==========================================================================
+   Base Products
+   ========================================================================== */
+
+/* General styling for all hero sections can be found above in "Base Hero" */
+
+#products-hero {
+  /* background-image: url(../img/hand-pickle-dark.jpg); */
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 768px) {
+  /* ---- Tablet Layout & Typograph ---- */
+  .content-container {
+    justify-content: space-between;
+    flex-direction: row;
   }
-  to {
-    transform: rotate(360deg);
+  .content-wrapper {
+    max-width: 1200px;
+  }
+  .content-item {
+    width: 30%;
+  }
+  /* ==========================================================================
+   Tablet Header
+   ========================================================================== */
+  .header-section {
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: row;
+    padding: var(--padding-small) var(--padding-normal);
+  }
+  .header__logo-link {
+    width: 25%;
+    padding: 0;
+  }
+  .header__nav {
+    width: 50%;
+    padding: var(--padding-small);
+  }
+  /* ==========================================================================
+   Tablet Footer
+   ========================================================================== */
+  .footer__newsletter {
+    width: 95%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: var(--padding-big) var(--padding-normal);
+  }
+  .footer__newsletter__header,
+  .footer__newsletter__email-input {
+    width: 45%;
+  }
+  .footer__newsletter__header {
+    padding-bottom: 0;
+    /* resets padding from mobile */
+  }
+  .footer__nav {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .footer__social-links {
+    font-size: 2rem;
+    width: 25%;
+  }
+  .footer__nav-links {
+    width: 45%;
+    flex-flow: row;
+  }
+  .footer__copyright {
+    padding: var(--padding-small);
+    width: 20%;
+    /* this makes padding the same as nav-links and social-links in Tablet. padding is larger for copyright on mobile. */
+  }
+  /* ==========================================================================
+    Tablet Homepage
+    ========================================================================== */
+  /* ----- Tablet Hero Section ---- */
+  .hero-section {
+    padding: var(--padding-big);
+  }
+  /* ----- Tablet Recipes Section ---- */
+  #recipes-section {
+    padding: var(--padding-big);
+  }
+  .recipe-article {
+    width: 40%;
+    /* width overrides general styling for .content-item on tablet */
+  }
+}
+
+/* Tablet media query ends */
+
+@media only screen and (min-width: 1024px) {
+  .recipe-article {
+    display: flex;
+    padding: var(--padding-small);
+  }
+  .recipe-article .content-item__img {
+    padding-right: var(--padding-small);
+    object-fit: cover;
+  }
+}
+
+/* Laptop media query ends */
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
   }
 }
