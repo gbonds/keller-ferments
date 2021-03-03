@@ -1,4 +1,6 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInstagramSquare, faFacebookSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons'
 
 export default function Footer() {
     return (
@@ -11,9 +13,15 @@ export default function Footer() {
             </div>
             <div className="footer__nav">
                 <div className="footer__social-links">
-                    <a href="#"><i className="fab fa-instagram-square"></i></a>
-                    <a href="#"><i className="fab fa-facebook-square"></i></a>
-                    <a href="#"><i className="fab fa-twitter-square"></i></a>
+                    <a href="" target='_blank'>
+                        <FontAwesomeIcon icon={faInstagramSquare} />
+                    </a>
+                    <a href="" target='_blank'>
+                        <FontAwesomeIcon icon={faFacebookSquare} />
+                    </a>
+                    <a href="" target='_blank'>
+                        <FontAwesomeIcon icon={faTwitterSquare} />
+                    </a>
                 </div>
                 <div className="footer__nav-links">
                     <li><a href="">Home</a></li>
