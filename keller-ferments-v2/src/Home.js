@@ -1,5 +1,9 @@
 import React from 'react'
-import Product from './Product'
+import allProducts from './productData'
+// import Product from './Product' 
+
+/* Filters all products with favorite property set to true, then filters first 3 in the array (0 to 2 in the index) */
+const topFavProducts = (allProducts.filter(singleProduct => singleProduct.favorite === true)).slice(0, 3)
 
 export default function Home() {
     return (
@@ -24,7 +28,25 @@ export default function Home() {
                     <h2 className="section__subheader">Products</h2>
                     <h3 className="section__header">Our Favorites</h3>
                     <div className="content-container">
-                        <Product />
+                        {/* Iterates over topFavProducts list and returns Product component for each item in list. */}
+                        {topFavProducts.map((singleProduct) => {
+                            const { id, url, name, price, image } = singleProduct
+
+                            {/* TODO create separate component for Product, but HOW? see Product.js for current attempt, do I need to create a useState? */ }
+                            return (
+                                <div key={id} className="content-item">
+                                    <a href={url} className="content-item__product-link">
+                                        <img
+                                            className="content-item__img"
+                                            src={image}
+                                            alt={name}
+                                        />
+                                        <h4 className="content-item__header">{name}</h4>
+                                    </a>
+                                    <p className="content-item__subheader">Starting at ${price}</p>
+                                </div>
+                            )
+                        })}
                     </div>
                     <button className="btn--transparent">View More</button> {/* TODO add link to button */}
                 </div>
