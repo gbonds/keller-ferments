@@ -1,10 +1,12 @@
 import React from 'react'
 import products from './productData'
 
+const favProdList = products.filter(singleProduct => singleProduct.favorite === true)
+
 export default function Product() {
     return (
         <>
-            {products.map((singleProduct) => {
+            {favProdList.map((singleProduct) => {
                 const { id, url, name, price, image } = singleProduct
 
                 return (
