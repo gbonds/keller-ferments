@@ -1,4 +1,5 @@
 import React from 'react'
+import Product from './Product'
 
 export default function Home() {
     return (
@@ -23,40 +24,7 @@ export default function Home() {
                     <h2 className="section__subheader">Products</h2>
                     <h3 className="section__header">Our Favorites</h3>
                     <div className="content-container">
-                        {/* TODO break these product items into components */}
-                        <div className="content-item">
-                            <a href="" className="content-item__product-link">
-                                <img
-                                    className="content-item__img"
-                                    src="./img/pickles-thumbnail_800px.jpg"
-                                    alt="Jar of pickles"
-                                />
-                                <h4 className="content-item__header">Classic Pickles</h4>
-                            </a>
-                            <p className="content-item__subheader">Starting at $8</p>
-                        </div>
-                        <div className="content-item">
-                            <a href="" className="content-item__product-link">
-                                <img
-                                    className="content-item__img"
-                                    src="./img/kombucha-thumbnail_800.jpg"
-                                    alt="Jar of kombucha brewing"
-                                />
-                                <h4 className="content-item__header">Kombucha Starter Kit</h4>
-                            </a>
-                            <p className="content-item__subheader">Starting at $35</p>
-                        </div>
-                        <div className="content-item">
-                            <a href="" className="content-item__product-link">
-                                <img
-                                    className="content-item__img"
-                                    src="./img/kimchi-thumbnail_800.jpg"
-                                    alt="Bowl of kimchi"
-                                />
-                                <h4 className="content-item__header">Yo' Mama's Kimchi</h4>
-                            </a>
-                            <p className="content-item__subheader">Starting at $12</p>
-                        </div>
+                        <Product />
                     </div>
                     <button className="btn--transparent">View More</button> {/* TODO add link to button */}
                 </div>
