@@ -4,7 +4,7 @@ const recipes = [
         name: 'Kimchi Pancake',
         postDate: '2020-06-12',
         image:
-            './img/pickles-thumbnail_800px.jpg',
+            'img/pickles-thumbnail_800px.jpg',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate modi odio, voluptatibus dignissimos vel qui repellat, distinctio culpa autem optio iure quae accusamus. Quos, exercitationem?',
         ingredients: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam accusantium laudantium cumque?',
@@ -15,7 +15,7 @@ const recipes = [
         name: 'Party Snack Board',
         postDate: '2020-03-25',
         image:
-            './img/pickles-thumbnail_800px.jpg',
+            'img/pickles-thumbnail_800px.jpg',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate modi odio, voluptatibus dignissimos vel qui repellat, distinctio culpa autem optio iure quae accusamus. Quos, exercitationem?',
         ingredients: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam accusantium laudantium cumque?',
@@ -26,7 +26,7 @@ const recipes = [
         name: 'Rueben Sandwich',
         postDate: '2020-02-14',
         image:
-            './img/pickles-thumbnail_800px.jpg',
+            'img/pickles-thumbnail_800px.jpg',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate modi odio, voluptatibus dignissimos vel qui repellat, distinctio culpa autem optio iure quae accusamus. Quos, exercitationem?',
         ingredients: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam accusantium laudantium cumque?',

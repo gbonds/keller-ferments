@@ -574,7 +574,7 @@ footer {
     padding: var(--padding-big);
   }
   .recipe-article {
-    width: 40%;
+    width: 45%;
     /* width overrides general styling for .content-item on tablet */
   }
 }
