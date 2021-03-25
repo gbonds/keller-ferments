@@ -8,7 +8,7 @@ const topFavProducts = (allProducts.filter(singleProduct => singleProduct.favori
 export default function Home() {
     return (
         <main>
-            <section className="hero-section" id="homepage-hero">
+            <section className="hero-section" id="homepage-hero" style={{ backgroundImage: `url(require("/img/pickle-collection_dark.jpg"))`, backgroundColor: 'gray' }}>
                 <div className="content-wrapper">
                     <h2 className="hero__header">
                         Homemade ferments that are good for your gut and your tastebuds.
@@ -52,7 +52,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section id="reviews-section" className="section-wrapper">
+            <section id="reviews-section" className="section-wrapper" style={{ backgroundImage: `url(require("/img/jar-wall_dark.jpg"))`, backgroundColor: 'gray' }}>
                 <div className="content-wrapper">
                     <h2 className="section__subheader">Reviews</h2>
                     <h3 className="section__header">You'll Love Us!</h3>
