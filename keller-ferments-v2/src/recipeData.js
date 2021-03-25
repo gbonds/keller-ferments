@@ -1,10 +1,10 @@
 const recipes = [
     {
         id: 1,
-        name: 'Kimchi Pancake',
-        postDate: '2020-06-12',
+        name: 'Party Snack Board',
+        date: '2020-03-25',
         image:
-            'img/kimchi-pancake_original.jpeg',
+            'img/charcuterie-board_1000px.jpg',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate modi odio, voluptatibus dignissimos vel qui repellat, distinctio culpa autem optio iure quae accusamus. Quos, exercitationem?',
         ingredients: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam accusantium laudantium cumque?',
@@ -12,10 +12,10 @@ const recipes = [
     },
     {
         id: 2,
-        name: 'Party Snack Board',
-        postDate: '2020-03-25',
+        name: 'Kimchi Pancake',
+        date: '2020-06-12',
         image:
-            'img/charcuterie-board_original.jpg',
+            'img/kimchi-pancake_1000px.jpeg',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate modi odio, voluptatibus dignissimos vel qui repellat, distinctio culpa autem optio iure quae accusamus. Quos, exercitationem?',
         ingredients: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam accusantium laudantium cumque?',
@@ -24,9 +24,9 @@ const recipes = [
     {
         id: 3,
         name: 'Rueben Sandwich',
-        postDate: '2020-02-14',
+        date: '2021-02-14',
         image:
-            'img/reuben-sandwich_original.jpg',
+            'img/reuben-sandwich_1000px.jpg',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate modi odio, voluptatibus dignissimos vel qui repellat, distinctio culpa autem optio iure quae accusamus. Quos, exercitationem?',
         ingredients: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam accusantium laudantium cumque?',

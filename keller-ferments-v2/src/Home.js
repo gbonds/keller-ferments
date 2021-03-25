@@ -1,9 +1,12 @@
 import React from 'react'
 import allProducts from './productData'
 // import Product from './Product' 
+import allRecipes from './recipeData'
 
 /* Filters all products with favorite property set to true, then filters first 3 in the array (0 to 2 in the index) */
 const topFavProducts = (allProducts.filter(singleProduct => singleProduct.favorite === true)).slice(0, 3)
+/* Filters the last two most recent recipes (e.g. if length of array is 4, will display 2nd and 3rd objects in array.) */
+const recentRecipes = (allRecipes).slice((allRecipes.length - 2), (allRecipes.length))
 
 export default function Home() {
     return (
@@ -32,7 +35,7 @@ export default function Home() {
                         {topFavProducts.map((singleProduct) => {
                             const { id, url, name, price, image } = singleProduct
 
-                            {/* TODO create separate component for Product, but HOW? see Product.js for current attempt, do I need to create a useState? */ }
+                            {/* TODO create separate component for Recipe/Product, but HOW? see Product.js for current attempt, do I need to create a useState? */ }
                             return (
                                 <div key={id} className="content-item">
                                     <a href={url} target="_blank" className="content-item__product-link">
@@ -92,42 +95,31 @@ export default function Home() {
                     <h2 className="section__subheader">Recipes</h2>
                     <h3 className="section__header">Get Inspired</h3>
                     <div className="content-container">
-                        {/* TODO break recipe items into components */}
-                        <article className="recipe-article content-item">
-                            <img
-                                className="content-item__img"
-                                src="img/kimchi-pancake_183px.jpeg"
-                                alt="kimchi pancake"
-                            />
-                            <div className="recipe-article__content">
-                                <h4 className="content-item__header">Kimchi Pancake</h4>
-                                <p className="content-item__subheader">July 12, 2020</p>
-                                <p className="content-item__body">
-                                    Ingredients ½ cup kimchi, ¾ cup rice flour, 3 Tbsp neutral
-                                    oil…
+                        {/* Iterates over recentRecipes list and returns article for each item in list. */}
+                        {recentRecipes.map((singleRecipe) => {
+                            const { id, url, name, image, date } = singleRecipe
+
+                            {/* TODO create separate component for Recipe/Product, but HOW? see Product.js for current attempt, do I need to create a useState? */ }
+                            return (
+                                <article key={id} className="recipe-article content-item">
+                                    <img
+                                        className="content-item__img"
+                                        src={image}
+                                        alt={name}
+                                    />
+                                    <div className="recipe-article__content">
+                                        <h4 className="content-item__header">{name}</h4>
+                                        <p className="content-item__subheader">{date}</p>
+                                        <p className="content-item__body">
+                                            ingredients...
                                 </p>
-                                <p>
-                                    <a href="#" className="content-item__recipe-link">Read More</a>→
+                                        <p>
+                                            <a href={url} className="content-item__recipe-link">Read More</a>→
                                 </p>
-                            </div>
-                        </article>
-                        <article className="recipe-article content-item">
-                            <img
-                                className="content-item__img"
-                                src="img/snackboard_183px.jpeg"
-                                alt="snackboard"
-                            />
-                            <div className="recipe-article__content">
-                                <h4 className="content-item__header">Party Snack Board</h4>
-                                <p className="content-item__subheader">March 25, 2020</p>
-                                <p className="content-item__body">
-                                    Ingredients Pickles, handful roasted nuts, gouda cheese…
-                                </p>
-                                <p>
-                                    <a href="#" className="content-item__recipe-link">Read More</a>→
-                                </p>
-                            </div>
-                        </article>
+                                    </div>
+                                </article>
+                            )
+                        })}
                     </div>
                 </div>
             </section>
