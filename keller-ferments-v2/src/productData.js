@@ -44,7 +44,7 @@ const products = [
         price: 40,
         currency: 'USD',
         image:
-            './img/pickles-thumbnail_800px.jpg',
+            'img/gift-thumbnail_800px.jpg',
         description:
             'Lorem ipsum dolor sit, amet consectetur adipisicing.',
         category: 'gift package',
