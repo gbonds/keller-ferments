@@ -5,7 +5,7 @@ const products = [
         price: 8,
         currency: 'USD',
         image:
-            './img/pickles-thumbnail_800px.jpg',
+            'img/pickles-thumbnail_800px.jpg',
         description:
             'Lorem ipsum dolor sit, amet consectetur adipisicing.',
         category: 'food product',
@@ -18,7 +18,7 @@ const products = [
         price: 35,
         currency: 'USD',
         image:
-            './img/pickles-thumbnail_800px.jpg',
+            'img/kombucha-thumbnail_800px.jpg',
         description:
             'Lorem ipsum dolor sit, amet consectetur adipisicing.',
         category: 'home kits',
@@ -31,7 +31,7 @@ const products = [
         price: 12,
         currency: 'USD',
         image:
-            './img/pickles-thumbnail_800px.jpg',
+            'img/kimchi-thumbnail_800px.jpg',
         description:
             'Lorem ipsum dolor sit, amet consectetur adipisicing.',
         category: 'food product',

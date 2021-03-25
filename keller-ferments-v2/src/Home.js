@@ -35,7 +35,7 @@ export default function Home() {
                             {/* TODO create separate component for Product, but HOW? see Product.js for current attempt, do I need to create a useState? */ }
                             return (
                                 <div key={id} className="content-item">
-                                    <a href={url} className="content-item__product-link">
+                                    <a href={url} target="_blank" className="content-item__product-link">
                                         <img
                                             className="content-item__img"
                                             src={image}
