@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { FaBars } from 'react-icons/fa'
 
 export default function Header() {
-    const [showLinks, setShowLinks] = useState(false)
+    const [showLinks, setShowLinks] = useState(true)
 
     return (
         <header className="header-section">
