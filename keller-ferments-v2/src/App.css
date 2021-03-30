@@ -406,6 +406,7 @@ footer {
 
 .recipe-article__content {
   text-align: left;
+  padding-left: var(--padding-small);
 }
 
 #recipes-section .content-item__body {
@@ -623,21 +624,7 @@ footer {
     flex-direction: row;
     justify-content: space-around;
   }
-
-  /* ==========================================================================
-    Laptop Homepage
-    ========================================================================== */
-  /* ----- Laptop Recipe Section ---- */
-  .recipe-article {
-    display: flex;
-    padding: var(--padding-small);
-  }
-  .recipe-article .content-item__img {
-    padding-right: var(--padding-small);
-    object-fit: cover;
-  }
 }
-
 /* Laptop media query ends */
 
 @media print,
