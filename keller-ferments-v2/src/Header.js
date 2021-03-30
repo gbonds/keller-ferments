@@ -7,23 +7,26 @@ export default function Header() {
 
     return (
         <header className="header-section">
-            <a href="index.html" className="header__logo-link">
-                <img
-                    src='img/logo_gray_hex212121.png'
-                    alt="Keller Ferment logo"
-                    className="header__logo"
-                />
-            </a>
-            <button
-                className="nav-toggle"
-                onClick={() => {
-                    setShowLinks(!showLinks)
-                }}
-            >
-                <FaBars />
-            </button>
+            <div className="header__navbar">
+                <a href="index.html" className="header__logo-link">
+                    <img
+                        src='img/logo_gray_hex212121.png'
+                        alt="Keller Ferment logo"
+                        className="header__logo"
+                    />
+                </a>
+                <button
+                    className="nav-toggle-btn"
+                    onClick={() => {
+                        setShowLinks(!showLinks)
+                    }}
+                >
+                    <FaBars />
+                </button>
+            </div>
+
             {showLinks &&
-                <div className="header__nav show-container">
+                <div className="header__nav-links show-container">
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Products</a></li>
