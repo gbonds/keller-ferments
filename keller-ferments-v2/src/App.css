@@ -105,6 +105,7 @@ textarea {
   --padding-normal: 2rem;
   --padding-big: calc(var(--padding-normal) * 1.5);
   --padding-small: calc(var(--padding-normal) * 0.5);
+  --transition: all 0.3s linear;
 }
 
 body {
@@ -225,7 +226,7 @@ section {
 .header__nav-links-container {
   height: 0;
   overflow: hidden;
-  transition: all 0.3s linear;
+  transition: var(--transition);
 }
 
 .header__nav-links-container ul {
@@ -396,6 +397,11 @@ footer {
 
 #recipes-section {
   background-color: var(--clr-primary);
+}
+
+.recipe-article {
+  display: flex;
+  flex-direction: column;
 }
 
 .recipe-article__content {
@@ -578,9 +584,6 @@ footer {
   .recipe-article {
     width: 45%;
     /* width overrides general styling for .content-item on tablet */
-  }
-  .recipe-article .content-item__img {
-    width: 60%;
   }
 }
 
