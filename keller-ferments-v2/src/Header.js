@@ -1,12 +1,12 @@
 import React from 'react'
-import logo from './img/logo_gray_hex212121.png'
+// TODO add logo import here, was having issues with file path in production. -GB 3/30/21
 
 export default function Header() {
     return (
         <header className="header-section">
             <a href="index.html" className="header__logo-link">
                 <img
-                    src={logo}
+                    src='img/logo_gray_hex212121.png'
                     alt="Keller Ferment logo"
                     className="header__logo"
                 />

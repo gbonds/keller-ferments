@@ -15,7 +15,7 @@ const recipes = [
         name: 'Kimchi Pancake',
         date: '2020-06-12',
         image:
-            'img/kimchi-pancake_1000px.jpeg',
+            'img/kimchi-pancake_1000px.jpg',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate modi odio, voluptatibus dignissimos vel qui repellat, distinctio culpa autem optio iure quae accusamus. Quos, exercitationem?',
         ingredients: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam accusantium laudantium cumque?',
