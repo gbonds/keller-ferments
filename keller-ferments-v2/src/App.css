@@ -222,7 +222,13 @@ section {
   padding-bottom: var(--padding-normal);
 }
 
-.header__nav-links ul {
+.header__nav-links-container {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+
+.header__nav-links-container ul {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -230,7 +236,7 @@ section {
   list-style-type: none;
 }
 
-.header__nav-links ul li a {
+.header__nav-links-container ul li a {
   text-decoration: none;
   color: inherit;
   line-height: 1.6;
@@ -598,8 +604,9 @@ footer {
     display: none;
   }
 
-  .header__nav-links {
+  .header__nav-links-container {
     width: 50%;
+    height: auto !important;
     display: flex;
     align-items: flex-end;
     padding-bottom: var(
@@ -607,7 +614,7 @@ footer {
     ); /* set to match padding for header__logo-link so image and nav links line up on bottom */
   }
 
-  .header__nav-links ul {
+  .header__nav-links-container ul {
     width: 100%;
     display: flex;
     flex-direction: row;
