@@ -27,7 +27,7 @@ export default function Footer() {
                 <form className="footer__form-container" onSubmit={handleSubmit}>
                     <input
                         type="text"
-                        id="email"
+                        id="email-input"
                         name="email"
                         placeholder="Your email address"
                         value={email} // value references useState value
