@@ -1,15 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagramSquare, faFacebookSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons'
 
 export default function Footer() {
+    const [email, setEmail] = useState('')
+
+    const handleSubmit = (e) => {
+        e.preventDefault() // prevents browser from automatically refreshing onSubmit
+        // if email input field is filled
+        if (email) {
+            console.log(`Success! Email submitted for ${email}`)
+            setEmail('') // clears field to empty string
+        }
+        // else fail if email input field is empty
+        else {
+            console.log('Failed submission due to empty field.')
+        }
+    }
+
     return (
         <footer>
             <div className="footer__newsletter">
                 <h4 className="footer__newsletter__header">
                     Want to hear more? Sign up for updates!
                 </h4>
-                <div className="footer__newsletter__email-input">Your email</div>
+                <form className="footer__form-container" onSubmit={handleSubmit}>
+                    <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        placeholder="Your email address"
+                        value={email} // value references useState value
+                        onChange={(e) => setEmail(e.target.value)} // onChange tracks the input as event target value
+                    />
+                    <button type="submit" id="email-signup-btn">Sign Me Up</button>
+                </form>
             </div>
             <div className="footer__nav">
                 <div className="footer__social-links">
