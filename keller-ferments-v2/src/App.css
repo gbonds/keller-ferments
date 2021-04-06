@@ -315,7 +315,6 @@ footer {
 #email-input {
   margin-bottom: var(--padding-small);
   border: 0.5px solid black;
-  text-align: center;
   width: 90%;
 }
 
