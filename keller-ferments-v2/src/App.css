@@ -144,6 +144,7 @@ ul {
 
 section {
   padding: var(--padding-normal);
+  /* switches to padding-big on laptop */
   text-align: center;
 }
 
@@ -165,6 +166,10 @@ section {
 
 .content-item {
   padding: var(--padding-small) 0;
+}
+
+.content-item__img {
+  width: 100%;
 }
 
 .content-item__header {
@@ -393,11 +398,6 @@ footer {
   color: inherit;
 }
 
-.content-item__img {
-  width: 100%;
-  max-width: 500px;
-}
-
 #product-feature-section button {
   margin: var(--padding-normal);
 }
@@ -425,6 +425,11 @@ footer {
 .recipe-article {
   display: flex;
   flex-direction: column;
+}
+
+.recipe-article .content-item {
+  max-width: 500px;
+  /* prevents recipe article images from getting too big on laptop */
 }
 
 .recipe-article__content {
@@ -678,6 +683,12 @@ footer {
 
   .footer__newsletter {
     width: 75%;
+  }
+  /* ==========================================================================
+   Laptop Body
+   ========================================================================== */
+  section {
+    padding: var(--padding-big);
   }
 }
 /* Laptop media query ends */
