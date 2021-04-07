@@ -321,6 +321,7 @@ footer {
 #email-signup-btn {
   text-transform: uppercase;
   width: 60%;
+  font-size: 0.9rem;
 }
 
 .footer__nav {
@@ -559,17 +560,32 @@ footer {
   .footer__newsletter {
     width: 95%;
     flex-direction: row;
-    justify-content: space-around;
-    padding: var(--padding-big) var(--padding-normal);
+    padding: var(--padding-big) 0;
   }
-  .footer__newsletter__header,
-  .footer__newsletter__email-input {
-    width: 45%;
-  }
+
   .footer__newsletter__header {
     padding-bottom: 0;
     /* resets padding from mobile */
+    width: 40%;
   }
+
+  .footer__form-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 60%;
+  }
+
+  #email-input {
+    margin-bottom: 0;
+    /* resets margin from mobile */
+    width: 50%;
+  }
+
+  #email-signup-btn {
+    width: 25%;
+    font-size: 0.75rem;
+  }
+
   .footer__nav {
     flex-direction: row-reverse;
     align-items: center;
