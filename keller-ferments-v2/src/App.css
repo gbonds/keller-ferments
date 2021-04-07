@@ -432,7 +432,9 @@ footer {
 }
 
 #recipes-section .content-item__body {
-  font-weight: var(--fw-normal);
+  display: none;
+  /* will display on tablet/laptop */
+  font-weight: var(--fw-light);
   padding: var(--padding-small) 0;
 }
 
@@ -629,6 +631,10 @@ footer {
   .recipe-article {
     width: 45%;
     /* width overrides general styling for .content-item on tablet */
+  }
+  #recipes-section .content-item__body {
+    display: block;
+    /* recipe description is hidden on mobile */
   }
 }
 
