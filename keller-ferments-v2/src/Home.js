@@ -97,7 +97,7 @@ export default function Home() {
                     <div className="content-container">
                         {/* Iterates over recentRecipes list and returns article for each item in list. */}
                         {recentRecipes.map((singleRecipe) => {
-                            const { id, url, name, image, date } = singleRecipe
+                            const { id, url, name, image, date, description } = singleRecipe
 
                             {/* TODO create separate component for Recipe/Product, but HOW? see Product.js for current attempt, do I need to create a useState? */ }
                             return (
@@ -110,12 +110,10 @@ export default function Home() {
                                     <div className="recipe-article__content">
                                         <h4 className="content-item__header">{name}</h4>
                                         <p className="content-item__subheader">{date}</p>
-                                        <p className="content-item__body">
-                                            ingredients...
-                                        </p>
+                                        <p className="content-item__body">{description.substring(0, 100)}...</p>
                                         <p>
                                             <a href={url} className="content-item__recipe-link">Read More</a>→
-                                </p>
+                                        </p>
                                     </div>
                                 </article>
                             )
