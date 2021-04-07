@@ -112,7 +112,7 @@ export default function Home() {
                                         <p className="content-item__subheader">{date}</p>
                                         <p className="content-item__body">
                                             ingredients...
-                                </p>
+                                        </p>
                                         <p>
                                             <a href={url} className="content-item__recipe-link">Read More</a>→
                                 </p>

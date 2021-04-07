@@ -2,7 +2,7 @@ const recipes = [
     {
         id: 1,
         name: 'Party Snack Board',
-        date: '2020-03-25',
+        date: 'March 24, 2020',
         image:
             'img/charcuterie-board_1000px.jpg',
         description:
@@ -13,7 +13,7 @@ const recipes = [
     {
         id: 2,
         name: 'Kimchi Pancake',
-        date: '2020-06-12',
+        date: 'June 12, 2020',
         image:
             'img/kimchi-pancake_1000px.jpg',
         description:
@@ -24,7 +24,7 @@ const recipes = [
     {
         id: 3,
         name: 'Rueben Sandwich',
-        date: '2021-02-14',
+        date: 'February 14, 2021',
         image:
             'img/reuben-sandwich_1000px.jpg',
         description:
