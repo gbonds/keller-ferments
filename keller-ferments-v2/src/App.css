@@ -150,6 +150,7 @@ section {
 .content-wrapper {
   max-width: 350px;
   margin: auto;
+  /* max-width set to 1200px for tablet/laptop, see media query for tablet. also setting separate max-width for header/footer in tablet media query. */
 }
 
 .section__subheader {
@@ -195,6 +196,8 @@ section {
 /* ==========================================================================
    Base Header & Navigation
    ========================================================================== */
+
+/* max-width set for header & footer in tablet media query. */
 
 .header-section {
   padding: var(--padding-small);
@@ -277,6 +280,8 @@ section {
 /* ==========================================================================
    Base Footer
    ========================================================================== */
+
+/* max-width set for header & footer in tablet media query. */
 
 footer {
   display: flex;
@@ -532,13 +537,20 @@ footer {
    ========================================================================== */
 
 @media only screen and (min-width: 768px) {
-  /* ---- Tablet Layout & Typograph ---- */
+  /* ---- Tablet Layout & Typography ---- */
+  header,
+  footer {
+    max-width: 1600px;
+    margin: auto;
+  }
+
   .content-container {
     justify-content: space-between;
     flex-direction: row;
   }
   .content-wrapper {
     max-width: 1200px;
+    /* separate max-width set for mobile, see Layout & Typography in base styling.  */
   }
   .content-item {
     width: 30%;
@@ -628,7 +640,7 @@ footer {
 
 @media only screen and (min-width: 1024px) {
   /* ==========================================================================
-   Laptop Header
+   Laptop Header & Footer
    ========================================================================== */
   .header-section {
     display: flex;
@@ -655,6 +667,10 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+  }
+
+  .footer__newsletter {
+    width: 75%;
   }
 }
 /* Laptop media query ends */

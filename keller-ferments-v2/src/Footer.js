@@ -20,7 +20,7 @@ export default function Footer() {
 
     return (
         <footer>
-            <div className="footer__newsletter">
+            <div className="footer__newsletter content-wrapper">
                 <h4 className="footer__newsletter__header">
                     Want to hear more? Sign up for updates!
                 </h4>
