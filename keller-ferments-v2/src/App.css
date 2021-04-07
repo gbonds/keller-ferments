@@ -84,11 +84,38 @@ textarea {
   resize: vertical;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+/* ============================================================================================================================
+   Author's custom styles [mobile-first]
+   ============================================================================================================================ */
 
-/* ---- Global Styles ---- */
+/* ==================================================
+ Overriding Default Formatting
+ ================================================== */
+
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+ul {
+  margin: 0;
+  /* overrides default margins */
+}
+
+ul {
+  padding: 0;
+  /* overrides default padding on lists */
+}
+
+/* ==================================================
+ Global Styling, Layout & Typography
+ ================================================== */
+/* INCLUDES
+    :root, HTML semantic elements and their related classes
+    .content and related classes
+    buttons
+ */
 
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;600&family=Montserrat:wght@300;500;600&display=swap");
 
@@ -116,42 +143,17 @@ body {
   font-weight: var(--fw-normal);
 }
 
-/* ---- Overriding Default Formatting ---- */
-
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-ul {
-  margin: 0;
-  /* overrides default margins */
-}
-
-ul {
-  padding: 0;
-  /* overrides default padding on lists */
-}
-
-/* ---- Layout & Typography ---- */
-
-.content-container {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
+header,
+footer {
+  max-width: 1600px;
+  margin: auto;
+  /* more styling for header and footer broken out in below sections */
 }
 
 section {
   padding: var(--padding-normal);
   /* switches to padding-big on laptop */
   text-align: center;
-}
-
-.content-wrapper {
-  max-width: 350px;
-  margin: auto;
-  /* max-width set to 1200px for tablet/laptop, see media query for tablet. also setting separate max-width for header/footer in tablet media query. */
 }
 
 .section__subheader {
@@ -162,6 +164,25 @@ section {
 .section__header {
   font-size: 1.5rem;
   padding-bottom: var(--padding-normal);
+}
+
+/* ========== 
+.content classes 
+========== */
+/* .content-... follows this structure: 
+    wrapper > container > item > img, header, subheader, body, product-link/recipe-link
+*/
+
+.content-wrapper {
+  max-width: 350px;
+  margin: auto;
+  /* max-width set to 1200px for tablet/laptop, see media query for tablet. also setting separate max-width for header/footer in tablet media query. */
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
 .content-item {
@@ -179,8 +200,11 @@ section {
 .content-item__subheader,
 .content-item__body {
   font-weight: var(--fw-light);
-  /* Recipes section has different font-weight for __body */
 }
+
+/* ========== 
+  Buttons
+========== */
 
 .btn--accent {
   background-color: var(--clr-accent);
@@ -198,11 +222,11 @@ section {
   border-radius: 0.75rem;
 }
 
-/* ==========================================================================
-   Base Header & Navigation
-   ========================================================================== */
+/* ==================================================
+ Base Header & Nav
+ ================================================== */
 
-/* max-width set for header & footer in tablet media query. */
+/* max-width set for header & footer above in Global Styling section */
 
 .header-section {
   padding: var(--padding-small);
@@ -251,9 +275,9 @@ section {
   line-height: 1.6;
 }
 
-/* ==========================================================================
-   Base Hero
-   ========================================================================== */
+/* ==================================================
+ Base Hero
+ ================================================== */
 
 /* Separate styling for each page's hero can be found in the styling sections for the page. */
 
@@ -282,11 +306,11 @@ section {
   margin: var(--padding-normal) 0;
 }
 
-/* ==========================================================================
-   Base Footer
-   ========================================================================== */
+/* ==================================================
+ Base Footer
+ ================================================== */
 
-/* max-width set for header & footer in tablet media query. */
+/* max-width set for header & footer above in Global Styling section */
 
 footer {
   display: flex;
@@ -296,6 +320,9 @@ footer {
   padding: var(--padding-small);
 }
 
+/* ========== 
+  Email newsletter signup
+========== */
 .footer__newsletter {
   display: flex;
   justify-content: center;
@@ -333,6 +360,10 @@ footer {
   width: 60%;
   font-size: 0.9rem;
 }
+
+/* ========== 
+  Social and footer nav links
+========== */
 
 .footer__nav {
   width: 100%;
@@ -379,15 +410,15 @@ footer {
   font-size: 0.75rem;
 }
 
-/* ==========================================================================
-   Base Homepage
-   ========================================================================== */
-
-/* ----- Base (Homepage) Hero Section ---- */
+/* ==================================================
+ Base Home page
+ ================================================== */
 
 /* General styling for all hero sections can be found above in "Base Hero" */
 
-/* ----- Base Product Feature Section ---- */
+/* ========== 
+  Base Product Feature section
+========== */
 
 #product-feature-section .content-container {
   text-align: left;
@@ -402,7 +433,9 @@ footer {
   margin: var(--padding-normal);
 }
 
-/* ----- Base Reviews Section ---- */
+/* ========== 
+  Base Reviews section
+========== */
 
 #reviews-section {
   /* background-image: url(../img/jar-wall_dark.jpg); */
@@ -416,7 +449,9 @@ footer {
   line-height: 1.6;
 }
 
-/* ----- Base Recipes Section ---- */
+/* ========== 
+  Base Recipes section
+========== */
 
 #recipes-section {
   background-color: var(--clr-primary);
@@ -440,7 +475,6 @@ footer {
 #recipes-section .content-item__body {
   display: none;
   /* will display on tablet/laptop */
-  font-weight: var(--fw-light);
   padding: var(--padding-small) 0;
 }
 
@@ -448,15 +482,17 @@ footer {
   color: inherit;
 }
 
-/* ==========================================================================
-   Base Products
-   ========================================================================== */
+/* ==================================================
+ Base Products page
+ ================================================== */
 
 /* General styling for all hero sections can be found above in "Base Hero" */
 
 #products-hero {
   /* background-image: url(../img/hand-pickle-dark.jpg); */
 }
+
+/* =================================== END OF AUTHOR'S CUSTOM BASE STYLES [mobile-first] =================================== */
 
 /* ==========================================================================
    Helper classes
@@ -540,32 +576,17 @@ footer {
   clear: both;
 }
 
-/* ==========================================================================
-   MEDIA QUERY - Tablet Styling
-   ========================================================================== */
+/* ============================================================================================================================
+   Media Queries
+   ============================================================================================================================ */
 
 @media only screen and (min-width: 768px) {
-  /* ---- Tablet Layout & Typography ---- */
-  header,
-  footer {
-    max-width: 1600px;
-    margin: auto;
-  }
-
-  .content-container {
-    justify-content: space-between;
-    flex-direction: row;
-  }
-  .content-wrapper {
-    max-width: 1200px;
-    /* separate max-width set for mobile, see Layout & Typography in base styling.  */
-  }
-  .content-item {
-    width: 30%;
-  }
-  /* ==========================================================================
-   Tablet Header
-   ========================================================================== */
+  /* ==================================================
+ Tablet Global Styles
+ ================================================== */
+  /* ========== 
+    Tablet Header
+  ========== */
   .header-section {
     padding: var(--padding-small) var(--padding-normal);
   }
@@ -574,9 +595,9 @@ footer {
     font-size: 4rem;
   }
 
-  /* ==========================================================================
-   Tablet Footer
-   ========================================================================== */
+  /* ========== 
+    Tablet Footer
+  ========== */
   .footer__newsletter {
     width: 95%;
     flex-direction: row;
@@ -623,14 +644,33 @@ footer {
     width: 20%;
     /* this makes padding the same as nav-links and social-links in Tablet. padding is larger for copyright on mobile. */
   }
-  /* ==========================================================================
-    Tablet Homepage
-    ========================================================================== */
-  /* ----- Tablet Hero Section ---- */
+  /* ========== 
+    Tablet .content classes
+  ========== */
+  .content-container {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .content-wrapper {
+    max-width: 1200px;
+    /* separate max-width set for mobile, see Layout & Typography in base styling.  */
+  }
+  .content-item {
+    width: 30%;
+  }
+
+  /* ==================================================
+ Tablet Home page
+ ================================================== */
+  /* ========== 
+    Tablet Hero section
+    ========== */
   .hero-section {
     padding: var(--padding-big);
   }
-  /* ----- Tablet Recipes Section ---- */
+  /* ========== 
+    Tablet Recipes section
+    ========== */
   #recipes-section {
     padding: var(--padding-big);
   }
@@ -642,18 +682,19 @@ footer {
     display: block;
     /* recipe description is hidden on mobile */
   }
+  /* ===== Tablet media query ends ===== */
 }
 
-/* Tablet media query ends */
-
-/* ==========================================================================
-    MEDIA QUERY - Laptop/Desktop Styling
-    ========================================================================== */
-
 @media only screen and (min-width: 1024px) {
-  /* ==========================================================================
-   Laptop Header & Footer
-   ========================================================================== */
+  /* ==================================================
+ Laptop/Desktop Global Styles
+ ================================================== */
+  section {
+    padding: var(--padding-big);
+  }
+  /* ========== 
+    Laptop Header
+  ========== */
   .header-section {
     display: flex;
     flex-direction: row;
@@ -680,18 +721,14 @@ footer {
     flex-direction: row;
     justify-content: space-around;
   }
-
+  /* ========== 
+    Laptop Footer
+  ========== */
   .footer__newsletter {
     width: 75%;
   }
-  /* ==========================================================================
-   Laptop Body
-   ========================================================================== */
-  section {
-    padding: var(--padding-big);
-  }
+  /* ===== Laptop/Desktop media query ends ===== */
 }
-/* Laptop media query ends */
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
