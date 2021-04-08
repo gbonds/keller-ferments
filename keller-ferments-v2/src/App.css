@@ -123,6 +123,7 @@ ul {
   --clr-dark: rgb(33, 33, 33);
   --clr-light: white;
   --clr-primary: rgb(221, 126, 107);
+  --clr-primary-dark: rgb(214 44 10);
   --clr-accent: rgb(32, 96, 59);
   --ff-main: "Montserrat", sans-serif;
   --ff-accent: "Comfortaa", sans-serif;
@@ -354,6 +355,17 @@ footer {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  position: relative;
+  padding-top: 25px;
+  /* position and padding-top so that error-msg can be positioned above input */
+}
+
+.email-input__error-msg {
+  position: absolute;
+  top: 0;
+  color: var(--clr-primary-dark);
+  font-weight: var(--fw-light);
+  font-size: 0.9rem;
 }
 
 #email-input {
