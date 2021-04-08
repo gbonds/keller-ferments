@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagramSquare, faFacebookSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons'
+import Newsletter from './newsletter/NewsletterFormController'
 
 export default function Footer() {
     const [email, setEmail] = useState('')
@@ -37,6 +38,12 @@ export default function Footer() {
                     />
                     <button type="submit" id="email-signup-btn">Sign Me Up</button>
                 </form>
+            </div>
+            <div className="footer__newsletter content-wrapper">
+                <h4 className="footer__newsletter__header">
+                    Want to hear more? Sign up for updates!
+                </h4>
+                < Newsletter />
             </div>
             <div className="footer__nav">
                 <div className="footer__social-links">
