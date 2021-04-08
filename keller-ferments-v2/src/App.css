@@ -349,10 +349,16 @@ footer {
   font-weight: var(--fw-light);
 }
 
+.email-input-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 #email-input {
   margin-bottom: var(--padding-small);
   border: 0.5px solid black;
-  width: 90%;
 }
 
 #email-signup-btn {
@@ -607,6 +613,7 @@ footer {
   .footer__newsletter__header {
     padding-bottom: 0;
     /* resets padding from mobile */
+    padding-right: var(--padding-normal);
     width: 40%;
   }
 
@@ -616,14 +623,17 @@ footer {
     width: 60%;
   }
 
+  .email-input-container {
+    margin-right: var(--padding-small);
+  }
+
   #email-input {
     margin-bottom: 0;
     /* resets margin from mobile */
-    width: 50%;
   }
 
   #email-signup-btn {
-    width: 25%;
+    width: 30%;
     font-size: 0.75rem;
   }
 
@@ -726,6 +736,8 @@ footer {
   ========== */
   .footer__newsletter {
     width: 75%;
+    max-width: 750px;
+    /* max-width prevents email input from looking too large */
   }
   /* ===== Laptop/Desktop media query ends ===== */
 }

@@ -25,24 +25,6 @@ export default function Footer() {
                 <h4 className="footer__newsletter__header">
                     Want to hear more? Sign up for updates!
                 </h4>
-                <form className="footer__form-container" onSubmit={handleSubmit}>
-                    <input
-                        type="text"
-                        id="email-input"
-                        name="email"
-                        placeholder="Your email address"
-                        value={email} // value references useState value
-                        onFocus={(e) => e.target.placeholder = ""} // hides placeholder text when input is focused on
-                        onBlur={(e) => e.target.placeholder = "Your email address"} // reinstates placeholder text after focus event
-                        onChange={(e) => setEmail(e.target.value)} // onChange tracks the input as event target value
-                    />
-                    <button type="submit" id="email-signup-btn">Sign Me Up</button>
-                </form>
-            </div>
-            <div className="footer__newsletter content-wrapper">
-                <h4 className="footer__newsletter__header">
-                    Want to hear more? Sign up for updates!
-                </h4>
                 < Newsletter />
             </div>
             <div className="footer__nav">

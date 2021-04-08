@@ -4,8 +4,8 @@ export default ({ email, errors, onEmailChange, onSubmit }) => {
     return (
         <>
             <form className="footer__form-container" onSubmit={onSubmit}>
-                <div>
-                    {errors.email && <div>{errors.email}</div>}
+                <div className="email-input-container">
+                    {errors.email && <div className="email-input__error-msg">{errors.email}</div>}
 
                     <input
                         type="text"
