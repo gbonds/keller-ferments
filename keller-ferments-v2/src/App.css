@@ -368,6 +368,14 @@ footer {
   font-size: 0.9rem;
 }
 
+.email-input__success-msg {
+  font-weight: var(--fw-light);
+}
+
+.email-input__success-msg strong {
+  color: var(--clr-accent);
+}
+
 #email-input {
   margin-bottom: var(--padding-small);
   border: 0.5px solid black;

@@ -1,6 +1,6 @@
 import React from 'react';
 export default ({email}) => {
   return (
-    <div>We've successfully added <strong>{email}</strong> to our newsletter. Thank you.</div>
+      <div className="email-input__success-msg">Success! We've added <strong>{email}</strong> to our newsletter. Thanks!</div>
   );
 };

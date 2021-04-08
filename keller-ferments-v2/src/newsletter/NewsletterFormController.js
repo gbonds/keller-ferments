@@ -23,6 +23,7 @@ export default class NewsletterFormController extends PureComponent {
         e.preventDefault();
         const { email } = this.state;
         const errors = {};
+        // TODO: add parameter that catches if email doesn't include period after @
         if (!email || !email.includes('@')) {
             errors.email = 'Please enter a valid email.';
         }
