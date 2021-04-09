@@ -30,6 +30,7 @@ export default class NewsletterFormController extends PureComponent {
         if (!isEmpty(errors)) {
             return this.setState({ errors });
         }
+
         // TODO: Send data to the server and show feedback to the user.
         this.setState({
             showSuccessBlock: true
