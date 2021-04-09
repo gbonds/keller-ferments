@@ -358,19 +358,27 @@ footer {
   flex-direction: column;
   position: relative;
   padding-top: 25px;
-  /* position and padding-top set so that error-msg can be positioned above input field. 
+  /* position and padding-top set so that alert-msg can be positioned above input field. 
   #email-signup-btn also has the same margin for positioning needs. */
 }
 
-.email-input__error-msg {
+.email-input__alert-msg {
   position: absolute;
   top: 0;
   /* position and top:0 enable message to appear over input field without affect field's position. */
-  color: var(--clr-primary-dark);
   font-weight: var(--fw-light);
   font-size: 0.9rem;
 }
 
+.email-input__alert-msg .alert-danger {
+  color: var(--clr-primary-dark);
+}
+
+.email-input__alert-msg .alert-success {
+  color: var(--clr-accent);
+}
+
+/* TODO clean up styling below, no longer relevant 
 .email-input__success-msg {
   font-weight: var(--fw-light);
 }
@@ -378,6 +386,7 @@ footer {
 .email-input__success-msg strong {
   color: var(--clr-accent);
 }
+*/
 
 #email-input {
   margin-bottom: var(--padding-small);
