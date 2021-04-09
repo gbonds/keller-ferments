@@ -357,7 +357,8 @@ footer {
   flex-direction: column;
   position: relative;
   padding-top: 25px;
-  /* position and padding-top so that error-msg can be positioned above input */
+  /* position and padding-top set so that error-msg can be positioned above input field. 
+  #email-signup-btn also has the same margin for positioning needs. */
 }
 
 .email-input__error-msg {
@@ -385,6 +386,7 @@ footer {
   text-transform: uppercase;
   width: 60%;
   font-size: 0.9rem;
+  /* margin-top set in tablet media query so it lines up with #email-input on tablet/laptop. */
 }
 
 /* ========== 
@@ -655,6 +657,8 @@ footer {
   #email-signup-btn {
     width: 30%;
     font-size: 0.75rem;
+    margin-top: 25px;
+    /* margin-top matches padding-top of .email-input-container for positioning needs on tablet/laptop. */
   }
 
   .footer__nav {
