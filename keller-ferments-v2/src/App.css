@@ -342,6 +342,7 @@ footer {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  font-weight: var(--fw-light);
 }
 
 #email-input,
@@ -364,6 +365,7 @@ footer {
 .email-input__error-msg {
   position: absolute;
   top: 0;
+  /* position and top:0 enable message to appear over input field without affect field's position. */
   color: var(--clr-primary-dark);
   font-weight: var(--fw-light);
   font-size: 0.9rem;
