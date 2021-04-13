@@ -5,7 +5,7 @@ export default function EmailSignup() {
     const [email, setEmail] = useState('')
     const [alert, setAlert] = useState({
         // passing an object to useState with a empty msg and type values assigned to it
-        show: true,
+        show: false,
         type: '',
         msg: ''
     })

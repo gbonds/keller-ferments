@@ -6,7 +6,7 @@ export default function Alert({ type, msg, removeAlert }) {
     useEffect(() => {
         const timeout = setTimeout(() => {
             removeAlert()
-        }, 1500)
+        }, 1700)
         return () => {
             // cleanup function
             clearTimeout(timeout)
