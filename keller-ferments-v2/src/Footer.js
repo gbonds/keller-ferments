@@ -6,19 +6,6 @@ import EmailSignup from './EmailSignup'
 export default function Footer() {
     const [email, setEmail] = useState('')
 
-    const handleSubmit = (e) => {
-        e.preventDefault() // prevents browser from automatically refreshing onSubmit
-        // if email input field is filled
-        if (email) {
-            console.log(`Success! Email submitted for ${email}`)
-            setEmail('') // clears field to empty string
-        }
-        // else fail if email input field is empty
-        else {
-            console.log('Failed submission due to empty field.')
-        }
-    }
-
     return (
         <footer>
             <div className="footer__newsletter content-wrapper">
