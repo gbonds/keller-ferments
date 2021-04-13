@@ -4,7 +4,6 @@ import { faInstagramSquare, faFacebookSquare, faTwitterSquare } from '@fortaweso
 import EmailSignup from './EmailSignup'
 
 export default function Footer() {
-    const [email, setEmail] = useState('')
 
     return (
         <footer>
