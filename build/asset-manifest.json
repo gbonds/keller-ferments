@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/keller-ferments/static/css/main.82403c6a.chunk.css",
+    "main.js": "/keller-ferments/static/js/main.6e032a51.chunk.js",
+    "main.js.map": "/keller-ferments/static/js/main.6e032a51.chunk.js.map",
+    "runtime-main.js": "/keller-ferments/static/js/runtime-main.aa68608e.js",
+    "runtime-main.js.map": "/keller-ferments/static/js/runtime-main.aa68608e.js.map",
+    "static/js/2.dc1c83e7.chunk.js": "/keller-ferments/static/js/2.dc1c83e7.chunk.js",
+    "static/js/2.dc1c83e7.chunk.js.map": "/keller-ferments/static/js/2.dc1c83e7.chunk.js.map",
+    "index.html": "/keller-ferments/index.html",
+    "static/css/main.82403c6a.chunk.css.map": "/keller-ferments/static/css/main.82403c6a.chunk.css.map",
+    "static/js/2.dc1c83e7.chunk.js.LICENSE.txt": "/keller-ferments/static/js/2.dc1c83e7.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aa68608e.js",
+    "static/js/2.dc1c83e7.chunk.js",
+    "static/css/main.82403c6a.chunk.css",
+    "static/js/main.6e032a51.chunk.js"
+  ]
+}
