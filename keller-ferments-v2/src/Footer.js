@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagramSquare, faFacebookSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons'
-import Newsletter from './newsletter/NewsletterFormController'
 import EmailSignup from './EmailSignup'
 
 export default function Footer() {
