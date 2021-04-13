@@ -1,0 +1,850 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ============================================================================================================================
+   Author's custom styles [mobile-first]
+   ============================================================================================================================ */
+
+/* ==================================================
+ Overriding Default Formatting
+ ================================================== */
+
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+ul {
+  margin: 0;
+  /* overrides default margins */
+}
+
+ul {
+  padding: 0;
+  /* overrides default padding on lists */
+}
+
+/* ==================================================
+ Global Styling, Layout & Typography
+ ================================================== */
+/* INCLUDES
+    :root, HTML semantic elements and their related classes
+    .content and related classes
+    buttons
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;600&family=Montserrat:wght@300;500;600&display=swap");
+
+:root {
+  --clr-dark: rgb(33, 33, 33);
+  --clr-light: white;
+  --clr-primary: rgb(221, 126, 107);
+  --clr-primary-dark: rgb(214 44 10);
+  --clr-accent: rgb(32, 96, 59);
+  --ff-main: "Montserrat", sans-serif;
+  --ff-accent: "Comfortaa", sans-serif;
+  --fw-normal: 500;
+  --fw-light: 300;
+  --fw-bold: 600;
+  --padding-normal: 2rem;
+  --padding-big: calc(var(--padding-normal) * 1.5);
+  --padding-small: calc(var(--padding-normal) * 0.5);
+  --transition: all 0.3s linear;
+}
+
+body {
+  background: #fffdf3ff;
+  color: var(--clr-dark);
+  font-size: 16px;
+  font-family: var(--ff-main);
+  font-weight: var(--fw-normal);
+}
+
+header,
+footer {
+  max-width: 1600px;
+  margin: auto;
+  /* more styling for header and footer broken out in below sections */
+}
+
+section {
+  padding: var(--padding-normal);
+  /* switches to padding-big on laptop */
+  text-align: center;
+}
+
+.section__subheader {
+  font-size: 1rem;
+  font-family: var(--ff-accent);
+}
+
+.section__header {
+  font-size: 1.5rem;
+  padding-bottom: var(--padding-normal);
+}
+
+/* ========== 
+.content classes 
+========== */
+/* .content-... follows this structure: 
+    wrapper > container > item > img, header, subheader, body, product-link/recipe-link
+*/
+
+.content-wrapper {
+  max-width: 350px;
+  margin: auto;
+  /* max-width set to 1200px for tablet/laptop, see media query for tablet. also setting separate max-width for header/footer in tablet media query. */
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.content-item {
+  padding: var(--padding-small) 0;
+}
+
+.content-item__img {
+  width: 100%;
+}
+
+.content-item__header {
+  padding-top: calc(var(--padding-small) * 0.75);
+}
+
+.content-item__subheader,
+.content-item__body {
+  font-weight: var(--fw-light);
+}
+
+/* ========== 
+  Buttons
+========== */
+
+.btn--accent {
+  background-color: var(--clr-accent);
+  color: var(--clr-light);
+  border: 1px solid var(--clr-light);
+  padding: var(--padding-small);
+  border-radius: 0.75rem;
+}
+
+.btn--transparent {
+  background-color: inherit;
+  color: var(--clr-accent);
+  border: 0.15rem solid var(--clr-accent);
+  padding: var(--padding-small);
+  border-radius: 0.75rem;
+}
+
+/* ==================================================
+ Base Header & Nav
+ ================================================== */
+
+/* max-width set for header & footer above in Global Styling section */
+
+.header-section {
+  padding: var(--padding-small);
+}
+
+.header__navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo-link {
+  width: 60%;
+  padding: var(--padding-small);
+}
+
+.header__logo {
+  width: 100%;
+}
+
+.nav-toggle-btn {
+  color: var(--clr-dark);
+  font-size: 3rem;
+  background: transparent;
+  border-color: transparent;
+  padding-right: var(--padding-small);
+  padding-bottom: var(--padding-normal);
+}
+
+.header__nav-links-container {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.header__nav-links-container ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}
+
+.header__nav-links-container ul li a {
+  text-decoration: none;
+  color: inherit;
+  line-height: 1.6;
+}
+
+/* ==================================================
+ Base Hero
+ ================================================== */
+
+/* Separate styling for each page's hero can be found in the styling sections for the page. */
+
+.hero-section {
+  background-size: cover;
+  background-position: center;
+  color: var(--clr-light);
+  text-align: left;
+}
+
+.hero__header,
+.hero__body {
+  padding-bottom: var(--padding-small);
+}
+
+.hero__header {
+  font-family: var(--ff-accent);
+  font-weight: var(--fw-light);
+}
+
+.hero__body {
+  font-weight: var(--fw-light);
+}
+
+.hero-section button {
+  margin: var(--padding-normal) 0;
+}
+
+/* ==================================================
+ Base Footer
+ ================================================== */
+
+/* max-width set for header & footer above in Global Styling section */
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: var(--padding-small);
+}
+
+/* ========== 
+  Email newsletter signup
+========== */
+.footer__newsletter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: var(--padding-normal);
+}
+
+.footer__newsletter__header {
+  text-align: center;
+  padding-bottom: var(--padding-normal);
+}
+
+.footer__form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-weight: var(--fw-light);
+}
+
+#email-input,
+#email-signup-btn {
+  padding: calc(var(--padding-small) * 0.5);
+  font-weight: var(--fw-light);
+}
+
+.email-input-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding-top: 25px;
+  /* position and padding-top set so that alert-msg can be positioned above input field. 
+  #email-signup-btn also has the same margin for positioning needs. */
+}
+
+.email-input__alert-msg {
+  position: absolute;
+  top: 0;
+  /* position and top:0 enable message to appear over input field without affect field's position. */
+  font-weight: var(--fw-light);
+  font-size: 0.9rem;
+}
+
+.email-input__alert-msg .alert-danger {
+  color: var(--clr-primary-dark);
+}
+
+.email-input__alert-msg .alert-success {
+  color: var(--clr-accent);
+}
+
+/* TODO clean up styling below, no longer relevant 
+.email-input__success-msg {
+  font-weight: var(--fw-light);
+}
+
+.email-input__success-msg strong {
+  color: var(--clr-accent);
+}
+*/
+
+#email-input {
+  margin-bottom: var(--padding-small);
+  border: 0.5px solid black;
+}
+
+#email-signup-btn {
+  text-transform: uppercase;
+  width: 60%;
+  font-size: 0.9rem;
+  /* margin-top set in tablet media query so it lines up with #email-input on tablet/laptop. */
+}
+
+/* ========== 
+  Social and footer nav links
+========== */
+
+.footer__nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer__social-links,
+.footer__nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: var(--padding-small);
+}
+
+.footer__social-links {
+  font-size: 2.5rem;
+}
+
+.footer__social-links a {
+  color: inherit;
+}
+
+.footer__nav-links {
+  list-style-type: none;
+  font-size: 0.85rem;
+  flex-flow: column;
+}
+
+.footer__nav-links li {
+  padding: var(--padding-small);
+}
+
+.footer__nav-links a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer__copyright {
+  font-weight: var(--fw-light);
+  padding: var(--padding-normal);
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+/* ==================================================
+ Base Home page
+ ================================================== */
+
+/* General styling for all hero sections can be found above in "Base Hero" */
+
+/* ========== 
+  Base Product Feature section
+========== */
+
+#product-feature-section .content-container {
+  text-align: left;
+}
+
+.content-item__product-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+#product-feature-section button {
+  margin: var(--padding-normal);
+}
+
+/* ========== 
+  Base Reviews section
+========== */
+
+#reviews-section {
+  /* background-image: url(../img/jar-wall_dark.jpg); */
+  background-size: cover;
+  background-position: center;
+  color: var(--clr-light);
+}
+
+#reviews-section .content-item {
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* ========== 
+  Base Recipes section
+========== */
+
+#recipes-section {
+  background-color: var(--clr-primary);
+}
+
+.recipe-article {
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe-article .content-item {
+  max-width: 500px;
+  /* prevents recipe article images from getting too big on laptop */
+}
+
+.recipe-article__content {
+  text-align: left;
+  padding-left: var(--padding-small);
+}
+
+#recipes-section .content-item__body {
+  display: none;
+  /* will display on tablet/laptop */
+  padding: var(--padding-small) 0;
+}
+
+.content-item__recipe-link {
+  color: inherit;
+}
+
+/* ==================================================
+ Base Products page
+ ================================================== */
+
+/* General styling for all hero sections can be found above in "Base Hero" */
+
+#products-hero {
+  /* background-image: url(../img/hand-pickle-dark.jpg); */
+}
+
+/* =================================== END OF AUTHOR'S CUSTOM BASE STYLES [mobile-first] =================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ============================================================================================================================
+   Media Queries
+   ============================================================================================================================ */
+
+@media only screen and (min-width: 768px) {
+  /* ==================================================
+ Tablet Global Styles
+ ================================================== */
+  /* ========== 
+    Tablet Header
+  ========== */
+  .header-section {
+    padding: var(--padding-small) var(--padding-normal);
+  }
+
+  .nav-toggle-btn {
+    font-size: 4rem;
+  }
+
+  /* ========== 
+    Tablet Footer
+  ========== */
+  .footer__newsletter {
+    width: 95%;
+    flex-direction: row;
+    padding: var(--padding-big) 0;
+  }
+
+  .footer__newsletter__header {
+    padding-bottom: 0;
+    /* resets padding from mobile */
+    padding-right: var(--padding-normal);
+    width: 40%;
+  }
+
+  .footer__form-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 60%;
+  }
+
+  .email-input-container {
+    margin-right: var(--padding-small);
+  }
+
+  #email-input {
+    margin-bottom: 0;
+    /* resets margin from mobile */
+  }
+
+  #email-signup-btn {
+    width: 30%;
+    font-size: 0.75rem;
+    margin-top: 25px;
+    /* margin-top matches padding-top of .email-input-container for positioning needs on tablet/laptop. */
+  }
+
+  .footer__nav {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .footer__social-links {
+    font-size: 2rem;
+    width: 25%;
+  }
+  .footer__nav-links {
+    width: 45%;
+    flex-flow: row;
+  }
+  .footer__copyright {
+    padding: var(--padding-small);
+    width: 20%;
+    /* this makes padding the same as nav-links and social-links in Tablet. padding is larger for copyright on mobile. */
+  }
+  /* ========== 
+    Tablet .content classes
+  ========== */
+  .content-container {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .content-wrapper {
+    max-width: 1200px;
+    /* separate max-width set for mobile, see Layout & Typography in base styling.  */
+  }
+  .content-item {
+    width: 30%;
+  }
+
+  /* ==================================================
+ Tablet Home page
+ ================================================== */
+  /* ========== 
+    Tablet Hero section
+    ========== */
+  .hero-section {
+    padding: var(--padding-big);
+  }
+  /* ========== 
+    Tablet Recipes section
+    ========== */
+  #recipes-section {
+    padding: var(--padding-big);
+  }
+  .recipe-article {
+    width: 45%;
+    /* width overrides general styling for .content-item on tablet */
+  }
+  #recipes-section .content-item__body {
+    display: block;
+    /* recipe description is hidden on mobile */
+  }
+  /* ===== Tablet media query ends ===== */
+}
+
+@media only screen and (min-width: 1024px) {
+  /* ==================================================
+ Laptop/Desktop Global Styles
+ ================================================== */
+  section {
+    padding: var(--padding-big);
+  }
+  /* ========== 
+    Laptop Header
+  ========== */
+  .header-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav-toggle-btn {
+    display: none;
+  }
+
+  .header__nav-links-container {
+    width: 50%;
+    height: auto !important;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: var(
+      --padding-small
+    ); /* set to match padding for header__logo-link so image and nav links line up on bottom */
+  }
+
+  .header__nav-links-container ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  /* ========== 
+    Laptop Footer
+  ========== */
+  .footer__newsletter {
+    width: 75%;
+    max-width: 750px;
+    /* max-width prevents email input from looking too large */
+  }
+  /* ===== Laptop/Desktop media query ends ===== */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
